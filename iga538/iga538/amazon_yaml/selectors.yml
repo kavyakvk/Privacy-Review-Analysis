@@ -1,0 +1,57 @@
+bulk_review_block:
+    css: div.a-section.review-views
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        reviews:
+            css: div.a-section.celwidget
+            xpath: null
+            multiple: true
+            type: Text
+            children:
+                title:
+                    css: 'a.a-size-base span'
+                    xpath: null
+                    type: Text
+                content:
+                    css: div.a-row.a-spacing-small.review-data
+                    xpath: null
+                    type: Text
+                date:
+                    css: span.a-size-base.a-color-secondary
+                    xpath: null
+                    type: Text
+                verified:
+                    css: 'div.a-row.review-data span.a-size-mini'
+                    xpath: null
+                    type: Text
+                author:
+                    css: span.a-profile-name
+                    xpath: null
+                    type: Text
+                rating:
+                    css: 'div.a-row:nth-of-type(2) > a.a-link-normal:nth-of-type(1)'
+                    xpath: null
+                    type: Text
+                helpful:
+                    css: 'span.cr-vote span.a-size-base'
+                    xpath: null
+                    type: Text
+product_title:
+    css: 'h1.a-size-large a.a-link-normal'
+    xpath: null
+    type: Text
+next_page:
+    css: 'li.a-last a'
+    xpath: null
+    type: Link
+num_ratings:
+    css: 'div.a-section.a-spacing-medium div.a-row span'
+    xpath: null
+    type: Text
+other_reviews:
+    css: 'div#cm_cr-rvw_summary.a-section'
+    xpath: null
+    multiple: true
+    type: Text
