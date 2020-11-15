@@ -1,0 +1,56 @@
+bulk_review_block:
+    css: 'div#reviews-accordion.col-xs-12'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        reviews:
+            css: li.review-item
+            xpath: null
+            multiple: true
+            type: Text
+            children:
+                title:
+                    css: h4.review-title
+                    xpath: null
+                    type: Text
+                content:
+                    css: p.pre-white-space
+                    xpath: null
+                    type: Text
+                date:
+                    css: time.submission-date
+                    xpath: null
+                    type: Text
+                verified:
+                    css: 'div.verified-purchaser-mv-wrapper button.btn'
+                    xpath: null
+                    type: Text
+                author:
+                    css: 'div.review-item-header strong'
+                    xpath: null
+                    type: Text
+                rating:
+                    css: div.review-rating
+                    xpath: null
+                    type: Text
+                helpful:
+                    css: 'div.feedback-display button.btn'
+                    xpath: null
+                    type: Text
+product_title:
+    css: a.v-fw-regular
+    xpath: null
+    type: Text
+next_page:
+    css: 'li.page.next svg.caret-styles'
+    xpath: null
+    type: Link
+num_ratings:
+    css: 'div.ugc-rating-summary span.c-reviews-v4'
+    xpath: null
+    type: Text
+avg_customer_rating:
+    css: 'div.ugc-rating-summary span.overall-rating'
+    xpath: null
+    type: Text
