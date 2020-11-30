@@ -10,10 +10,18 @@ The following websites (which contain customer reviews of different home IoT pro
 	* Amazon.com (change version in run_spiders to "AMZ")
 	* BestBuy.com (change version in run_spiders to "BB")
 
+```
 python3 run_spiders.py
+```
 
 ### Getting Aggregate Statistics
 Getting a csv with P&S reviews and a csv with metadata:
-	- python3 reviews_with_PS_words.py
+```
+	python3 reviews_with_PS_words.py
+```
 Getting a csv for Topic Modeling:
-	- python3 allreviews.py
+```
+	python3 allreviews.py
+```
+
+### Topic Modeling
