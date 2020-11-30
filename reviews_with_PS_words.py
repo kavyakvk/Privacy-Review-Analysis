@@ -12,7 +12,7 @@ PS_keywords += "privacy policy virus license agreement malware spyware antivirus
 PS_arr = PS_keywords.split(" ")
 PS_arr += ["tos", "third-party", "secure"]
 PS_arr += ["targeted", "advertisement", "ads", "scary", "unusual"]
-PS_arr += ["uncomfortable", "safe", "safety", "invasive", "intrusion", "aware", "unaware","right"]
+PS_arr += ["uncomfortable", "safe", "safety", "invasive", "intrusion", "aware", "unaware", "right"]
 
 PS_arr_multiplewords = ["third party", "terms of service", "privacy concern", "informed consent", "data collect", 
 						"not aware"]
