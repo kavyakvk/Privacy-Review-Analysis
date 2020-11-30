@@ -7,7 +7,7 @@ Smart home assistants like Amazon Alexa and Google Home have become ubiquitous i
 ## Overview of Technology
 ### Using Scrapy and SelectorLib to Scrape Websites
 The following websites (which contain customer reviews of different home IoT products) were scraped for this project:
-	- Amazon.com
-	- BestBuy.com (scrapy runspider iga538/spiders/bb.py)
+	- Amazon.com (change version in run_spiders to "AMZ")
+	- BestBuy.com (change version in run_spiders to "BB")
 ### Getting Aggregate Statistics
 	- python3 reviews_with_PS_words.py

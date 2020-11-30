@@ -3,17 +3,27 @@ import scrapy
 import os 
 import selectorlib 
 from dateutil import parser as dateparser
+from dateutil import relativedelta
+import datetime
+from scrapy.crawler import CrawlerProcess, CrawlerRunner
+from twisted.internet import reactor
+from scrapy.exporters import CsvItemExporter
+from scrapy.utils.project import get_project_settings
+from twisted.internet import reactor
+from multiprocessing import Process, Queue
+import pickle
 
 class AmzSpider(scrapy.Spider): 
-	name = 'amz' 
-	allowed_domains = ['amazon.com/']
-	start_urls = ['https://www.amazon.com/Echo-Studio/product-reviews/B07G9Y3ZMC/ref=cm_cr_arp_d_paging_btm_next_'+str(i)+'?ie=UTF8&reviewerType=all_reviews&pageNumber=' + str(i) for i in range(1,1200)] 
-	#self._title_path = settings.get('TITLE_PATH', '')
+	def __init__(self, start_urls, **kwargs):
+		self.name = 'amz' 
+		self.allowed_domains = ['amazon.com/']
+		self.start_urls = start_urls 
+		#self._title_path = settings.get('TITLE_PATH', '')
 
-	# Create Extractor for product page 
-	product_page_extractor = selectorlib.Extractor.from_yaml_file(os.path.join(os.path.dirname(__file__),'../yaml/amazon_selectors.yml')) 
-	
-	author_data = set()
+		# Create Extractor for product page 
+		self.product_page_extractor = selectorlib.Extractor.from_yaml_file(os.path.join(os.path.dirname(__file__),'../yaml/amazon_selectors.yml')) 
+		
+		self.author_data = set()
 
 	def parse(self, response): 
 		# Extract data using Extractor 
@@ -49,5 +59,3 @@ class AmzSpider(scrapy.Spider):
 					else:
 						print("duplicate author", len(self.author_data))
 		# sleep(5)
-
-

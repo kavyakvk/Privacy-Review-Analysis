@@ -12,14 +12,15 @@ PS_keywords += "privacy policy virus license agreement malware spyware antivirus
 PS_arr = PS_keywords.split(" ")
 PS_arr += ["tos", "third-party", "secure"]
 PS_arr += ["targeted", "advertisement", "ads", "scary", "unusual"]
-PS_arr += ["uncomfortable", "safe", "safety", "invasive", "intrusion"]
+PS_arr += ["uncomfortable", "safe", "safety", "invasive", "intrusion", "aware", "right"]
 
-PS_arr_multiplewords = ["third party", "terms of service", "privacy concern", "informed consent"]
+PS_arr_multiplewords = ["third party", "terms of service", "privacy concern", "informed consent", "data collect", 
+						"not aware"]
 
 gift_arr = ["gift", "present"]
-people_arr = ["wife", "husband", "partner", "kids", "children", "child", "baby", 
-				"todler", "babies", "in-law", "mother", "father", "inlaw", "cousin",
-				"brother", "sister", "grandparent", "grandma", "grandpa"]
+people_arr = ["wife", "husband", "partner", "kid", "children", "child", "baby", 
+				"toddler", "babies", "in-law", "mother", "father", "inlaw", "cousin",
+				"brother", "sister", "grandparent", "grandma", "grandpa", "friend"]
 
 counter = 0
 
