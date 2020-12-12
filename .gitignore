@@ -2,3 +2,5 @@
 *.xlsx
 *.pptx
 *.pdf
+.DS_Store
+.DS_Store
