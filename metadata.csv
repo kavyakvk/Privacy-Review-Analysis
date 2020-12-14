@@ -1,4 +1,4 @@
-product,version,source,total reviews,P&S reviews,non-P&S 0 reviews,non-P&S 1 reviews,non-P&S 2 reviews,non-P&S 3 reviews,non-P&S 4 reviews,non-P&S 5 reviews,P&S 0 reviews,P&S 1 reviews,P&S 2 reviews,P&S 3 reviews,P&S 4 reviews,P&S 5 reviews
+product,version,source,total_reviews,PS_reviews,non-PS-0_reviews,non-PS-1_reviews,non-PS-2_reviews,non-PS-3_reviews,non-PS-4_reviews,non-PS-5_reviews,PS-0_reviews,PS-1_reviews,PS-2_reviews,PS-3_reviews,PS-4_reviews,PS-5_reviews
 NestOutdoorCam,,AMZ,2567,733,0,181,83,108,223,1239,0,112,68,69,102,382
 GoogleHomeMini,1stGen,BB,15060,366,0,56,74,456,3214,10894,0,4,4,19,95,244
 NestMini,2stGen,BB,1918,53,0,15,15,58,332,1445,0,3,2,6,8,34
@@ -34,7 +34,6 @@ NestWifi,3Pack,BB,1328,71,0,32,15,25,149,1036,0,3,0,3,8,57
 EchoDot,,AMZ,4499,706,0,340,232,387,651,2183,0,91,56,78,123,358
 FacebookPortal,10,BB,232,14,0,2,1,7,32,176,0,1,0,0,3,10
 RingVideoDoorbell,,AMZ,1219,216,0,179,64,67,103,590,0,36,18,15,15,132
-,,BB,4,0,0,0,0,0,0,4,0,0,0,0,0,0
 NestThermostat,,AMZ,4319,422,0,546,152,161,326,2712,0,89,24,20,38,251
 FacebookPortal,,AMZ,653,55,0,64,35,42,59,398,0,9,4,10,7,25
 WyzeCamPan,,AMZ,4332,1150,0,526,251,282,405,1718,0,144,102,109,150,645

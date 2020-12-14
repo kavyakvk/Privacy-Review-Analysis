@@ -17,6 +17,23 @@ PS_arr += ["uncomfortable", "safe", "safety", "invasive", "intrusion", "aware", 
 PS_arr_multiplewords = ["third party", "terms of service", "privacy concern", "informed consent", "data collect", 
 						"not aware"]
 
+privacy_keywords = ["privacy", "permission", "surveillance",
+                    "advertisement","ads","confidential",
+                    "monitor","intrusion","spy","confidential",
+                   "private"]
+
+security_keywords = ["security","protection","safety","safe",
+                     "threat","targeted","secure","virus", "spyware", 
+                     "malware","firewall","breach","exploit","bot"]
+
+creepy_keywords = ["creepy", "scary", "unusual","invasive",
+                   "uncomfortable","violate","aware","unaware",
+                  "spooky", "creep"]
+
+data_keywords = ["data", "collection", "tos", "third-party",
+                 "terms", "delete","save","policy","agree",
+                 "agreement","consent","storage","information"]
+
 gift_arr = ["gift", "present"]
 people_arr = ["wife", "husband", "partner", "kid", "children", "child", "baby", 
 				"toddler", "babies", "in-law", "mother", "father", "inlaw", "cousin",
@@ -26,9 +43,9 @@ counter = 0
 
 with open("metadata.csv", mode="w") as metadata_file:
 	metadata_writer = csv.writer(metadata_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-	metadata_writer.writerow(["product", "version", "source", "total reviews", "P&S reviews",
-								"non-P&S 0 reviews","non-P&S 1 reviews","non-P&S 2 reviews","non-P&S 3 reviews","non-P&S 4 reviews","non-P&S 5 reviews",
-								"P&S 0 reviews","P&S 1 reviews","P&S 2 reviews","P&S 3 reviews","P&S 4 reviews","P&S 5 reviews"])
+	metadata_writer.writerow(["Product", "Version", "Source", "total_reviews", "PS_reviews",
+								"non-PS-0_reviews","non-PS-1_reviews","non-PS-2_reviews","non-PS-3_reviews","non-PS-4_reviews","non-PS-5_reviews",
+								"PS-0_reviews","PS-1_reviews","PS-2_reviews","PS-3_reviews","PS-4_reviews","PS-5_reviews"])
 
 	with open('aggregated_reviews.csv', mode='w') as write_file:
 		writer = csv.writer(write_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)

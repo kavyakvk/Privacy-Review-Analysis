@@ -1,0 +1,62 @@
+#PRIVACY
+##Convenience: Easy, Great, Setup, Home
+0.120*"easy" + 0.067*"great" + 0.037*"home" + 0.016*"able" + 0.016*"house" + 0.015*"set" + 0.013*"camera" + 0.012*"picture" + 0.010*"app" + 0.010*"up"
+##Convenience: Quality, Video, App
+0.043*"camera" + 0.017*"cameras" + 0.014*"motion" + 0.013*"app" + 0.011*"video" + 0.009*"time" + 0.009*"quality" + 0.009*"easy" + 0.009*"great" + 0.009*"good”
+##Convenience: Google, Nest, Temperature, Easy, App
+0.036*"nest" + 0.027*"thermostat" + 0.026*"home" + 0.014*"house" + 0.014*"google" + 0.014*"easy" + 0.013*"app" + 0.011*"temperature" + 0.011*"great" + 0.008*"phone"
+##Family: Nanit, Monitor, Sleep, Parents
+0.087*"nanit" + 0.043*"easy" + 0.034*"mind" + 0.032*"peace" + 0.025*"insights" + 0.022*"monitor" + 0.020*"parents" + 0.018*"daughter" + 0.018*"sleep" + 0.014*"love"
+##Family: Google, Wyze, Cameras, Home
+0.047*"cameras" + 0.035*"home" + 0.033*"google" + 0.017*"blink" + 0.016*"privacy" + 0.016*"wyze" + 0.011*"hub" + 0.011*"notifications" + 0.008*"family" + 0.008*"wife"
+##Advertisement: Screen, Video, Echo, Amazon, Alexa
+0.024*"screen" + 0.023*"ads" + 0.022*"video" + 0.018*"camera" + 0.018*"echo" + 0.016*"privacy" + 0.016*"pan" + 0.014*"amazon" + 0.013*"device" + 0.013*"alexa"
+##Advertisement: Alexa, Music, Dot Speaker
+0.050*"alexa" + 0.025*"music" + 0.024*"amazon" + 0.018*"privacy" + 0.015*"phone" + 0.015*"ads" + 0.012*"device" + 0.011*"dot" + 0.010*"app" + 0.009*"speaker"
+##Advertisement: Home, Scary, Time, Children
+0.022*"home" + 0.012*"scary" + 0.011*"privacy" + 0.010*"amazon" + 0.007*"time" + 0.007*"advertising" + 0.005*"google" + 0.005*"microphone" + 0.005*"children" + 0.005*"way"
+##Music: Alexa, Amazon, Echo, Device
+0.033*"alexa" + 0.028*"echo" + 0.026*"device" + 0.024*"amazon" + 0.023*"devices" + 0.023*"home" + 0.018*"privacy" + 0.015*"music" + 0.011*"apple" + 0.010*"room"
+##Music: Apple, Siri, Homepod, Room, Price
+0.039*"apple" + 0.031*"home" + 0.027*"siri" + 0.020*"homepod" + 0.016*"music" + 0.015*"privacy" + 0.015*"room" + 0.014*"price" + 0.014*"speaker" + 0.012*"google"
+#SECURITY
+##Security Cameras: Camera, Arlo, Video, Nest
+0.066*"camera" + 0.041*"cameras" + 0.021*"arlo" + 0.016*"app" + 0.016*"home" + 0.015*"security" + 0.015*"video" + 0.015*"nest" + 0.013*"surveillance" + 0.012*"motion"
+##Home environment: Ring, Doorbell, Door, Front, House
+0.072*"ring" + 0.067*"doorbell" + 0.050*"door" + 0.024*"video" + 0.022*"front" + 0.012*"security" + 0.011*"house" + 0.011*"home" + 0.010*"app" + 0.010*"able"
+##Locational safety: Motion, Detection, Alerts, Driveway, Zones
+0.229*"motion" + 0.055*"detection" + 0.039*"camera" + 0.026*"sensor" + 0.025*"alerts" + 0.022*"sensitivity" + 0.021*"video" + 0.020*"driveway" + 0.017*"door" + 0.017*"zones"
+#CREEPY
+##Personal Space: Home, Room, Night, Light
+0.017*"home" + 0.015*"house" + 0.013*"great" + 0.012*"room" + 0.010*"device" + 0.009*"sound" + 0.009*"night" + 0.008*"good" + 0.007*"light" + 0.007*"tv"
+#DATA
+##Data Saving: App, Save, Access, Recordings, Feed, Servers
+0.031*"app" + 0.025*"save" + 0.021*"access" + 0.019*"recordings" + 0.016*"website" + 0.015*"feed" + 0.010*"notification" + 0.009*"solution" + 0.009*"apps" + 0.008*"servers"
+##Data Saving: Cam, Aware, Data, Google, History
+0.151*"nest" + 0.023*"cam" + 0.023*"aware" + 0.020*"app" + 0.020*"camera" + 0.019*"cameras" + 0.014*"data" + 0.011*"google" + 0.011*"home" + 0.010*"history"
+##Data Saving: Camera, Storage, Cloud, Quality, Good
+0.054*"camera" + 0.030*"storage" + 0.027*"cameras" + 0.021*"video" + 0.020*"great" + 0.020*"cloud" + 0.015*"quality" + 0.014*"easy" + 0.012*"free" + 0.012*"good"
+##Data Security: Camera, Storrage, Nest, Motion
+0.082*"camera" + 0.037*"cameras" + 0.031*"storage" + 0.024*"video" + 0.020*"quality" + 0.018*"nest" + 0.016*"app" + 0.015*"motion" + 0.013*"cloud" + 0.013*"security"
+##Video: Facebook, Portal, Video, Screen, Software
+0.015*"facebook" + 0.014*"portal" + 0.010*"video" + 0.009*"system" + 0.009*"screen" + 0.008*"device" + 0.007*"amazon" + 0.007*"camera" + 0.006*"software" + 0.006*"privacy"
+##Product Purchasing: Information, Picture, Product, Video, Buy
+0.045*"product" + 0.020*"picture" + 0.018*"information" + 0.018*"facebook" + 0.018*"video" + 0.018*"amazon" + 0.017*"generation" + 0.014*"unit" + 0.011*"screen" + 0.011*"buy"
+##App Purchasing: Schedule, Money, Home, Data, Device
+0.025*"app" + 0.014*"set" + 0.014*"schedule" + 0.013*"money" + 0.013*"home" + 0.013*"data" + 0.011*"unit" + 0.011*"step" + 0.011*"wifi" + 0.011*"device"
+#GIFT
+## Family Gifting: Christmas, Son, Daughter, Mom
+0.150*"gift" + 0.054*"great" + 0.050*"christmas" + 0.028*"easy" + 0.028*"bought" + 0.026*"family" + 0.023*"son" + 0.018*"daughter" + 0.016*"mom" + 0.016*"good"
+## Camera Gifting: Security, Video, Issues, Ring
+0.020*"system" + 0.014*"studio" + 0.010*"issues" + 0.009*"ring" + 0.008*"clear" + 0.007*"more" + 0.007*"security" + 0.007*"present" + 0.007*"camera" + 0.006*"video"
+## Luxury Product Gifting: Alexa, Music, Smart, Weather, Home
+0.048*"alexa" + 0.045*"music" + 0.024*"gift" + 0.019*"echo" + 0.014*"smart" + 0.013*"weather" + 0.013*"device" + 0.011*"dot" + 0.011*"home" + 0.011*"christmas"
+#PEOPLE
+## Baby: Camera, Monitor, Night, Video
+0.078*"baby" + 0.070*"camera" + 0.059*"monitor" + 0.022*"quality" + 0.021*"app" + 0.018*"room" + 0.018*"night" + 0.017*"video" + 0.015*"cam" + 0.014*"phone"
+## Home Security: Camera, Nest, Ring, Door, Wife, Camera
+0.018*"home" + 0.014*"camera" + 0.014*"nest" + 0.011*"ring" + 0.010*"time" + 0.009*"door" + 0.009*"app" + 0.009*"great" + 0.008*"wife" + 0.008*"cameras"
+## Home Security: Doorbell, Ring, Door, Husband, Video
+0.048*"doorbell" + 0.045*"ring" + 0.025*"door" + 0.021*"house" + 0.018*"video" + 0.018*"home" + 0.014*"device" + 0.014*"husband" + 0.013*"motion" + 0.013*"security"
+## Children: Flex, Room, Playroom, Kid, Reading
+0.010*"flex" + 0.008*"room" + 0.007*"thermostat" + 0.007*"reading" + 0.006*"amazon" + 0.006*"bucks" + 0.006*"device" + 0.005*"product" + 0.005*"kid" + 0.005*"playroom"

@@ -2,12 +2,22 @@ import csv
 import os
 import glob
 
-privacy_keywords = ["privacy", "permission", "surveillance","advertisement","ads","confidential",
-                    "monitor","intrusion","spy","confidential"]
-security_keywords = ["security","protection","safety","safe","threat","targeted","secure"]
-creepy_keywords = ["creepy", "scary", "unusual","invasive","uncomfortable","violate","aware","unaware"]
-data_keywords = ["data", "collection", "tos", "third-party","terms", "delete","save","policy","agree",
-                 "agreement","consent","storage"]
+privacy_keywords = ["privacy", "permission", "surveillance",
+                    "advertisement","ads","confidential",
+                    "monitor","intrusion","spy","confidential",
+                   "private"]
+
+security_keywords = ["security","protection","safety","safe",
+                     "threat","targeted","secure","virus", "spyware", 
+                     "malware","firewall","breach","exploit","bot"]
+                     
+creepy_keywords = ["creepy", "scary", "unusual","invasive",
+                   "uncomfortable","violate","aware","unaware",
+                  "spooky", "creep", "spy"]
+
+data_keywords = ["data", "collection", "tos", "third-party",
+                 "terms", "delete","save","policy","agree",
+                 "agreement","consent","storage","information"]
 
 camera_products = ["NestOutdoorCam","NestMini","NestIndoorCam",
                    "WyzeCamPan","NanitPlus","ArloPro",
@@ -19,6 +29,11 @@ voice_assistant_products = ["GoogleHomeMini","NestMini",
 videocall_products = ["EchoShow","EchoStudio",
                      "NestHubMax","FacebookPortal"]
 other_products = ["NestWifi","NestThermostat"]
+
+gift_arr = ["gift", "present"]
+people_arr = ["wife", "husband", "partner", "kid", "children", "child", "baby", 
+				"toddler", "babies", "in-law", "mother", "father", "inlaw", "cousin",
+				"brother", "sister", "grandparent", "grandma", "grandpa", "friend"]
 
 PS_keywords = "privacy security individual fear leak protection breach violence " 
 PS_keywords += "permission physical loss threat storage terrorism data cyber surveillance "
@@ -37,7 +52,7 @@ PS_arr_multiplewords = ["third party", "terms of service", "privacy concern", "i
 
 with open('all_reviews.csv', mode = 'w') as all_reviews_file:
 	all_reviews_writer = csv.writer(all_reviews_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-	all_reviews_writer.writerow(["source", "product", "version", "date", "verified", "rating", "content", "title","PS","privacy","security","creepy","data","camera","doorbell","voice","videocall","other"])
+	all_reviews_writer.writerow(["source", "product", "version", "date", "verified", "rating", "content", "title","PS","privacy","security","creepy","data","camera","doorbell","voice","videocall","other","gift","people"])
 	
 	files = glob.glob(os.getcwd()+'/iga538/*.csv')
 	for filename in files:
@@ -67,15 +82,20 @@ with open('all_reviews.csv', mode = 'w') as all_reviews_file:
 							any(x in content for x in PS_arr_multiplewords) or any(x in title for x in PS_arr_multiplewords)):
 					PS_flag = 1
 
-				p,s,c,d = 0,0,0,0
+				p,s,c,d,gift,people = 0,0,0,0,0,0
 				if(any(x in content_arr for x in privacy_keywords) or any(x in title_arr for x in privacy_keywords)):
 					p = 1
 				if(any(x in content_arr for x in security_keywords) or any(x in title_arr for x in security_keywords)):
 					s = 1
 				if(any(x in content_arr for x in creepy_keywords) or any(x in title_arr for x in creepy_keywords)):
 					c = 1
-				if(any(x in content_arr for x in data_keywords) or any(x in title_arr for x in creepy_keywords)):
+				if(any(x in content_arr for x in data_keywords) or any(x in title_arr for x in data_keywords)):
 					d = 1
+				if(any(x in content_arr for x in gift_arr) or any(x in title_arr for x in gift_arr)):
+					gift = 1
+				if(any(x in content_arr for x in people_arr) or any(x in title_arr for x in people_arr)):
+					people = 1
+
 
 				cam, doorbell, voice, video, other = 0, 0, 0, 0, 0
 
@@ -102,5 +122,5 @@ with open('all_reviews.csv', mode = 'w') as all_reviews_file:
 
 				verified = int(row["verified"])
 				rating = float(row["rating"])
-				all_reviews_writer.writerow([source, product, version, date, verified, rating, content, title, PS_flag, p, s, c, d, cam, doorbell, voice, video, other])
+				all_reviews_writer.writerow([source, product, version, date, verified, rating, content, title, PS_flag, p, s, c, d, cam, doorbell, voice, video, other, gift, people])
 

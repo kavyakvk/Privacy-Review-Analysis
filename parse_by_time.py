@@ -3,6 +3,17 @@ import os
 import glob
 from datetime import datetime
 
+camera_products = ["NestOutdoorCam","NestMini","NestIndoorCam",
+                   "WyzeCamPan","NanitPlus","ArloPro",
+                   "RingStickUpCam","RingSpotlightCam","RingIndoorCam","RingFloodlightCam"]
+doorbell_products = ["RingVideoDoorbell","NestVideoDoorbell"]
+voice_assistant_products = ["GoogleHomeMini","NestMini",
+                            "Homepod",
+                            "EchoFlex","EchoDot"]
+videocall_products = ["EchoShow","EchoStudio",
+                     "NestHubMax","FacebookPortal"]
+other_products = ["NestWifi","NestThermostat"]
+
 def parse_time(d):
 	if("-" in d):
 		dt = datetime.strptime(d, '%d-%b-%y')
@@ -15,13 +26,13 @@ def parse_time(d):
 
 with open("aggregated_reviews.csv", mode='r') as read_file:
 	reader = csv.DictReader(read_file)
-	with open("time_aggregated_reviews.csv", mode="w") as write_file:
+	with open("time_aggregated_reviews_devices.csv", mode="w") as write_file:
 		writer = csv.writer(write_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
 		last_index = (2020-2015)
 		index_labels = [i for i in range(last_index+1)]
 		#index_labels.append(str(i%12 + 1)+"-\'"+str(i//12 + 2010))
-		writer.writerow(["product", "keyword"]+index_labels)
+		writer.writerow(["device_group","product", "keyword"]+index_labels)
 
 		trends = {}
 			
@@ -78,6 +89,18 @@ with open("aggregated_reviews.csv", mode='r') as read_file:
 
 		for p in trends.keys():
 			for k in trends[p].keys():
+				device = ""
+				if(p in camera_products):
+					device = "Cameras"
+				elif(p in doorbell_products):
+					device = "Doorbell"
+				elif(p in voice_assistant_products):
+					device = "Voice Assistants"
+				elif(p in videocall_products):
+					device = "Video Platforms"
+				else:
+					device = "Other"
+				
 				norm_row = [i/sum(total_reviews[p]) for i in trends[p][k]]
 				if(len([*filter(lambda x: x >= 0.0001, norm_row)]) > 0):
-					writer.writerow([p,k]+norm_row)
+					writer.writerow([device,p,k]+norm_row)
